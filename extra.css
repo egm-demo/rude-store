@@ -1,0 +1,118 @@
+/* секции, специфичные для вариантов */
+.hd .lgw{display:inline-flex;align-items:center;min-height:30px}
+.hd.center .subnav{display:flex;justify-content:center;gap:30px;padding:0 var(--pad) 14px;font:600 12px/1 var(--ui,'Inter');letter-spacing:.08em;text-transform:uppercase}
+.hd.center .in{height:var(--hd-h,76px)}
+.hd.mini{box-shadow:0 1px 0 var(--line)}
+
+/* герой-логотип */
+.hero-logo{background:var(--hl-bg,transparent);color:var(--hl-fg,inherit);text-align:center;padding:70px var(--pad) 64px;border-bottom:1px solid var(--line)}
+.hero-logo .lg{font-size:clamp(64px,13vw,190px);line-height:.86}
+.hl-sub{max-width:44ch;margin:28px auto 26px;font-size:15px;opacity:.75}
+.hl-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hero-logo .btn.ghost{color:inherit}
+
+/* сплит-герой */
+.hero-split{display:grid;grid-template-columns:1fr 1fr;min-height:560px;border-bottom:1px solid var(--line)}
+.hs-t{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:48px var(--pad)}
+.hs-t p{max-width:38ch;color:var(--muted);margin:0 0 24px}
+.hs-i{background:var(--tile);display:grid;place-items:center}
+.hs-i img{width:72%;mix-blend-mode:multiply}
+
+/* герой-товар (лонч) */
+.hero-prod{display:grid;grid-template-columns:1.15fr 1fr;border-bottom:1px solid var(--line)}
+.hp-i{background:var(--tile);aspect-ratio:1/1;display:grid;place-items:center}
+.hp-i img{width:82%;mix-blend-mode:multiply}
+.hp-t{display:flex;flex-direction:column;justify-content:center;padding:48px var(--pad)}
+.hp-p{color:var(--muted);max-width:36ch}
+
+/* карусель друга */
+.car{padding:0 0 24px}
+.car-t{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad);scrollbar-width:none}
+.car-t::-webkit-scrollbar{display:none}
+.cc{flex:0 0 min(78%,360px);aspect-ratio:3/4;position:relative;border-radius:16px;overflow:hidden;background:var(--tile);scroll-snap-align:center}
+.cc img{position:absolute;inset:12% 8% 18%;width:84%;height:70%;object-fit:contain;mix-blend-mode:multiply}
+.cct{position:absolute;left:16px;top:16px;right:16px;font:600 15px/1.25 var(--ui,'Inter')}
+.ccb{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ccb span{font-weight:600;padding-left:6px;font-variant-numeric:tabular-nums}
+.ccb a{height:42px;padding:0 26px;border-radius:999px;display:grid;place-items:center;background:var(--acc,#111);color:#111;font-weight:600}
+.dots{display:flex;gap:6px;justify-content:center;margin-top:14px}
+.dots i{width:6px;height:6px;border-radius:50%;background:#cfcfcf}
+.dots i.on{background:#111}
+
+/* плитки друга */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.tl{aspect-ratio:1/1;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font:600 clamp(15px,1.6vw,22px)/1.15 'Jost',var(--ui);text-transform:uppercase;letter-spacing:.02em;border:1px solid var(--line);color:var(--tile-fg,#111)}
+.tl b{font-size:clamp(30px,4vw,56px);font-weight:500;margin-bottom:8px}
+.tl.tb{justify-content:flex-end;align-items:flex-start;text-align:left;padding:20px;border:0;font-size:clamp(18px,2vw,28px)}
+.tl.dk{color:#fff}
+
+/* категории */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.cat b{display:block;margin-top:12px;font:700 15px/1.2 var(--h-font);text-transform:uppercase;letter-spacing:.04em}
+.cat span{color:var(--muted);font-size:13px}
+
+/* лончи */
+.launch{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.lnd{font:800 13px/1 var(--ui,'Inter');letter-spacing:.06em;margin:12px 0 6px}
+.lns{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* инфо */
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);border-top:1px solid var(--line);padding-top:28px}
+.info b{font:600 12px/1 var(--ui,'Inter');color:var(--muted)}
+.info h3{font:700 18px/1.2 var(--h-font);margin:10px 0 8px}
+.info p{margin:0;color:var(--muted);max-width:34ch}
+
+/* editorial */
+.edit{background:var(--ed-bg,#f1f1f1);color:var(--ed-fg,inherit);display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:var(--gap);padding:60px var(--pad)}
+.ed-t{font:800 clamp(56px,9vw,140px)/.95 var(--h-font);letter-spacing:-.02em;text-transform:uppercase}
+.ed-g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ed-g img{aspect-ratio:4/5;object-fit:contain;background:#fff;padding:8%;width:100%}
+
+/* три формы лого */
+.l3{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.l3>div{aspect-ratio:1/1;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:16px}
+.l3 .lg{font-size:clamp(22px,2.6vw,40px)}
+.l3 small{font-size:12px;color:var(--muted)}
+
+/* наличие */
+.st{font-size:11.5px;margin-top:4px;display:flex;align-items:center;gap:6px}
+.st::before{content:"";width:7px;height:7px;border-radius:50%;background:#7fcf98}
+.st.po::before{background:#b392cf}
+
+/* тёмные */
+.dark .tabs button{background:#151515;border-color:#2a2a2a;color:#888}
+.dark .tabs button.on{background:#f2f2f2;color:#111}
+.dark .pd .box{background:#111}
+.dark .ci .like svg{stroke:#111}
+.dark .tl{border-color:#2a2a2a}
+.dark .edit{background:#151515}
+
+/* моно */
+.mono .cbr,.mono .h2{font-family:'Archivo';text-transform:uppercase}
+.mono .cn{font-size:12px}
+.mono .ci{outline:1px solid var(--line);outline-offset:-1px}
+
+/* таблица */
+.ruled .grid{border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.ruled .c{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:0 0 16px}
+.ruled .cb{padding:12px 14px 0}
+
+@media (max-width:900px){
+  .hd.center .subnav{display:none}
+  .hero-split,.hero-prod,.edit{grid-template-columns:1fr}
+  .hs-i{min-height:340px;order:-1}
+  .hero-logo{padding:44px var(--pad) 40px}
+  .tiles{grid-template-columns:1fr 1fr;gap:8px}
+  .cats{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .cat b{font-size:12px}
+  .cat span{display:none}
+  .launch{display:flex;overflow-x:auto;gap:10px;scrollbar-width:none;margin:0 calc(-1*var(--pad));padding:0 var(--pad)}
+  .launch .ln{flex:0 0 62%}
+  .info{grid-template-columns:1fr;gap:22px}
+  .edit{padding:40px var(--pad)}
+  .l3{grid-template-columns:1fr 1fr;gap:8px}
+  .hd.end .search{display:none}
+}
+.tl b{color:#111}
+.dark .tl:not(.tb) b,.dark .tl:not(.tb){color:#f3f3f3;background:#151515!important}
+.edit .ed-g img{border-radius:var(--r,0)}

@@ -1,0 +1,35 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>№13 Друг + неон — The Rude Store</title><link rel="icon" href="../favicon.svg">
+<link rel="stylesheet" href="../fonts.css"><link rel="stylesheet" href="../base.css"><link rel="stylesheet" href="../extra.css">
+<style>:root{--logo-font:'Cormorant Garamond';--logo-size:15px;--logo-size-m:15px;--hd-h:84px;--hd-hm:76px;--btn-bg:#B5F23D;--btn-fg:#111;--badge-bg:#B5F23D;--sale:#111;--promo-bg:#B5F23D;--promo-fg:#111}</style></head>
+<body class="cs-friend">
+<div class="promo">Скидка на первый заказ −15%</div><header class="hd" id="hd"><div class="in">
+<div class="l"><a class="txtlink" href="#">Меню</a></div>
+<a href="#" class="lgw" style="justify-self:center"><span class="lg stack"><span>The</span><span>Rude</span><span>Store</span></span></a>
+<div class="r"><a class="txtlink" href="#">Корзина</a></div></div></header><template id="lgm"><span class="lg mono">TRS</span></template>
+<main><div class="tabs"><button class="on">Мужское</button><button>Женское</button></div>
+<section class="car"><div class="car-t" id="car"></div><div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div></section><section class="wrap sec" id="g"><div class="sechead"><div><div class="eyebrow">Каталог</div><h2 class="h2">Новинки</h2></div><a href="#">Смотреть всё</a></div>
+<div class="grid" style="--cd:4;margin-top:0" data-q="all" data-o='{"friend": true, "brand": false, "like": true}' data-l="" data-ch=""></div></section><section class="wrap sec"><div class="tiles">
+<div class="tl" style="background:#fff;color:#111"><b>−15%</b><span>Доставка<br>по России</span></div>
+<div class="tl tb dk" style="background:#111"><span>Доставка<br>по России</span></div>
+<div class="tl tb dk" style="background:#111"><span>Под заказ</span></div>
+<div class="tl tb" style="background:#B5F23D"><span>В наличии</span></div></div></section></main>
+<footer class="ft"><div><span class="lg stack"><span>The</span><span>Rude</span><span>Store</span></span><p>Оригинальные кроссовки и одежда из-за рубежа. Доставка по России.</p></div>
+<div><h4>Магазин</h4><a href="#g">Новинки</a><a href="#g">Обувь</a><a href="#g">Одежда</a><a href="#g">Sale</a></div>
+<div><h4>Помощь</h4><a href="#info">Как заказать</a><a href="#info">Доставка</a><a href="#info">Оригинальность</a></div>
+<div><h4>Связь</h4><a href="https://vk.com/choooice" target="_blank" rel="noopener">ВКонтакте</a></div></footer>
+<script>window.IMG='../img/';</script><script src="../products.js"></script><script src="../r.js"></script><script>
+(function(){const T=TRS,P=T.P;
+document.querySelectorAll('.ico[data-i]').forEach(e=>e.innerHTML=T.ICON[e.dataset.i]);
+const Q={all:P,sale:P.filter(p=>p.old).sort((a,b)=>T.off(b)-T.off(a)),shoes:P.filter(p=>p.cat==='Обувь'),wear:P.filter(p=>p.cat!=='Обувь')};
+document.querySelectorAll('.grid[data-q]').forEach(g=>{const o=JSON.parse(g.dataset.o||'{}');let l=Q[g.dataset.q]||P;if(g.dataset.l)l=l.slice(0,+g.dataset.l);T.grid(g,l,o);
+ if(g.dataset.ch){T.chips('#'+g.dataset.ch,g,{card:o,cats:['Всё','Обувь','Одежда','Куртки','Nike','Jordan']});}});
+const car=document.getElementById('car');
+if(car){car.innerHTML=[16,22,5,21,8].map(id=>{const p=P.find(x=>x.id===id);return `<div class="cc"><img src="../img/${p.img}" alt=""><div class="cct">${p.brand}<br>${p.name}</div><div class="ccb"><span>${T.rub(p.price)}</span><a href="#">Купить</a></div></div>`}).join('');
+ const dots=[...document.querySelectorAll('.dots i')];car.addEventListener('scroll',()=>{const i=Math.round(car.scrollLeft/(car.firstElementChild.offsetWidth+12));dots.forEach((d,k)=>d.classList.toggle('on',k===i))},{passive:true});}
+document.querySelectorAll('.tabs').forEach(t=>t.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;t.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b))}));
+T.drawer();T.collapse('#hd',120);
+T.pill('.grid[data-q="all"]',{card:{"friend": true, "brand": false, "like": true}});
+T.mark(13,"Друг + неон — Зелёный неон #B5F23D из его карусели вынесен в главный акцент: кнопки, бейджи скидок, активная вкладка.");})();
+</script><script>(function(){const h=document.getElementById('hd'),w=h.querySelector('.lgw'),big=w.innerHTML,sm=document.getElementById('lgm').innerHTML;let s=0;addEventListener('scroll',()=>{const m=scrollY>120;if(m!==s){s=m;w.innerHTML=m?sm:big;}},{passive:true});})();</script>
+</body></html>
