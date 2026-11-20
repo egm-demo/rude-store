@@ -1,7 +1,7 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>№26 Скругления — The Rude Store</title><link rel="icon" href="../favicon.svg">
 <link rel="stylesheet" href="../fonts.css"><link rel="stylesheet" href="../base.css"><link rel="stylesheet" href="../extra.css">
-<style>:root{--logo-font:'Jost';--r:16px;--btn-r:999px;--badge-r:999px;--logo-size:20px}</style></head>
+<style>:root{--logo-font:'Marcellus';--r:16px;--btn-r:999px;--badge-r:999px;--logo-size:20px}</style></head>
 <body class="">
 <header class="hd" id="hd"><div class="in">
 <div class="l"><span class="burger"></span><span class="ico" data-i="search"></span></div>
@@ -25,7 +25,7 @@ const Q={all:P,sale:P.filter(p=>p.old).sort((a,b)=>T.off(b)-T.off(a)),shoes:P.fi
 document.querySelectorAll('.grid[data-q]').forEach(g=>{const o=JSON.parse(g.dataset.o||'{}');let l=Q[g.dataset.q]||P;if(g.dataset.l)l=l.slice(0,+g.dataset.l);T.grid(g,l,o);
  if(g.dataset.ch){T.chips('#'+g.dataset.ch,g,{card:o,cats:['Всё','Обувь','Одежда','Куртки','Nike','Jordan']});}});
 const car=document.getElementById('car');
-if(car){car.innerHTML=[16,22,5,21,8].map(id=>{const p=P.find(x=>x.id===id);return `<div class="cc"><img src="../img/${p.img}" alt=""><div class="cct">${p.brand}<br>${p.name}</div><div class="ccb"><span>${T.rub(p.price)}</span><a href="#">Купить</a></div></div>`}).join('');
+if(car){car.innerHTML=[16,22,5,21,8].map(id=>{const p=P.find(x=>x.id===id);return `<div class="cc"><img src="../img/${p.img}" alt=""><div class="cct">${p.brand}<br>${p.name.replace(p.brand,'').trim()}</div><div class="ccb"><span>${T.rub(p.price)}</span><a href="#">Купить</a></div></div>`}).join('');
  const dots=[...document.querySelectorAll('.dots i')];car.addEventListener('scroll',()=>{const i=Math.round(car.scrollLeft/(car.firstElementChild.offsetWidth+12));dots.forEach((d,k)=>d.classList.toggle('on',k===i))},{passive:true});}
 document.querySelectorAll('.tabs').forEach(t=>t.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;t.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b))}));
 T.drawer();T.collapse('#hd',120);

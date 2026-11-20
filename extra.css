@@ -116,3 +116,39 @@
 .tl b{color:#111}
 .dark .tl:not(.tb) b,.dark .tl:not(.tb){color:#f3f3f3;background:#151515!important}
 .edit .ed-g img{border-radius:var(--r,0)}
+
+/* === 2026-11-20: макет друга строго по референсу (tg_image_2916259921 / 3157393078) === */
+.cs-friend .promo{font:400 12px/1 var(--ui,'Inter');letter-spacing:0;padding:10px 12px}
+.cs-friend .hd{border-bottom:1px solid #e3e3e3}
+.cs-friend .txtlink{font:400 13px/1 var(--ui,'Inter')}
+.cs-friend .tabs{padding:0;margin:0 0 32px;border-bottom:1px solid #e3e3e3}
+.cs-friend .tabs button{height:48px;border:0;background:#f2f2f2;color:#9a9a9a;font:400 14px/1 var(--ui,'Inter')}
+.cs-friend .tabs button.on{background:#fff;color:#111;border:0}
+.cs-friend .car-t{gap:8px;padding:0 16px;scroll-padding:0 16px}
+.cs-friend .cc{flex:0 0 calc(100% - 32px);aspect-ratio:4/5;border-radius:20px;background:#d9d9d9;scroll-snap-align:start}
+.cs-friend .cc img{inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:normal}
+.cs-friend .cc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38) 0%,rgba(0,0,0,0) 32%,rgba(0,0,0,0) 72%,rgba(0,0,0,.32) 100%);pointer-events:none}
+.cs-friend .cct{z-index:1;left:16px;top:18px;right:16px;color:#fff;font:300 22px/1.15 var(--ui,'Inter')}
+.cs-friend .ccb{z-index:1;left:16px;right:16px;bottom:16px}
+.cs-friend .ccb span{display:none}
+.cs-friend .ccb a{flex:1;height:47px;padding:0;border-radius:7px;background:rgba(70,60,55,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;font:400 15px/1 var(--ui,'Inter')}
+.cs-friend .dots{margin-top:16px}
+/* инста-плитки друга: белые — маленькое «−15%» сверху, крупная подпись ниже; цветные — белый текст слева снизу */
+.cs-friend .tl:not(.tb){justify-content:space-around;padding:18% 8% 22%}
+.cs-friend .tl:not(.tb) b{font-size:clamp(14px,3.6vw,30px);font-weight:500;margin:0}
+.cs-friend .tl:not(.tb) span{font-size:clamp(20px,5.2vw,40px);line-height:1.05}
+.cs-friend .tl.tb{color:#fff}
+
+/* фото у нас — студийные пэкшоты на белом, поэтому карточка серая, а текст тёмный (белый на белом не читается) */
+.cs-friend .cc{background:#ebebeb}
+.cs-friend .cc img{inset:14% 6% 20%;width:88%;height:66%;object-fit:contain;mix-blend-mode:multiply}
+.cs-friend .cc::after{display:none}
+.cs-friend .cct{color:#111}
+.cs-friend .ccb a{background:rgba(25,25,25,.6);color:#fff}
+.cs-friend .dots{gap:10px;margin-top:22px}
+.cs-friend .dots i{background:#bdbdbd}
+@media (max-width:900px){.cs-friend .hd .in{height:66px}}
+.cs-friend .cc{flex-basis:calc(100% - 6px)}
+.cs-friend .dots i.on{background:#111;transform:scale(1.25)}
+.cs-friend .dots{margin-top:28px}
+.cs-friend .car-t{gap:4px}

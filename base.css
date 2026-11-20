@@ -14,9 +14,9 @@ img{display:block;max-width:100%}
 .sechead a{font-size:13px;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
 
 /* ЛОГОТИП */
-.lg{font-family:var(--logo-font);text-transform:uppercase;color:inherit;display:inline-block;line-height:.92;letter-spacing:.02em;text-align:center;white-space:nowrap}
+.lg{font-family:var(--logo-font);-webkit-text-stroke:.028em currentColor;paint-order:stroke fill;text-transform:uppercase;color:inherit;display:inline-block;line-height:.91;letter-spacing:.075em;text-align:center;white-space:nowrap}
 .lg.stack span{display:block}
-.lg.one{letter-spacing:.16em}
+.lg.one{letter-spacing:.12em}
 .lg.mono{letter-spacing:.04em}
 .lg.badge{border:1.5px solid currentColor;border-radius:28%;padding:.32em .42em .26em;letter-spacing:.04em}
 
