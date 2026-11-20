@@ -134,9 +134,6 @@
 .cs-friend .ccb a{flex:1;height:47px;padding:0;border-radius:7px;background:rgba(70,60,55,.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;font:400 15px/1 var(--ui,'Inter')}
 .cs-friend .dots{margin-top:16px}
 /* инста-плитки друга: белые — маленькое «−15%» сверху, крупная подпись ниже; цветные — белый текст слева снизу */
-.cs-friend .tl:not(.tb){justify-content:space-around;padding:18% 8% 22%}
-.cs-friend .tl:not(.tb) b{font-size:clamp(14px,3.6vw,30px);font-weight:500;margin:0}
-.cs-friend .tl:not(.tb) span{font-size:clamp(20px,5.2vw,40px);line-height:1.05}
 .cs-friend .tl.tb{color:#fff}
 
 /* фото у нас — студийные пэкшоты на белом, поэтому карточка серая, а текст тёмный (белый на белом не читается) */
@@ -152,3 +149,32 @@
 .cs-friend .dots i.on{background:#111;transform:scale(1.25)}
 .cs-friend .dots{margin-top:28px}
 .cs-friend .car-t{gap:4px}
+
+/* === 2026-11-20: плитки строго по референсу друга === */
+.tiles .tl{border:0;border-radius:0}
+.tl.tw{background:#fff;color:#111;font-family:'Jost',var(--ui);font-weight:500}
+.dark .tl.tw{background:#151515;color:#f3f3f3}
+.tl.tw:not(.tp):not(.tx){justify-content:space-around;padding:16% 6% 18%}
+.tl.tw b{margin:0;font-weight:500}
+.tl.tx span{font-size:clamp(17px,2.2vw,30px);line-height:1}
+.tl.tp{justify-content:space-between;padding:7% 6%;text-decoration:none;color:inherit}
+.tl.tp i{font-style:normal;font-size:clamp(10px,1vw,14px);letter-spacing:.04em;line-height:1}
+.tl.tp img{width:56%;height:62%;object-fit:contain;mix-blend-mode:multiply}
+.dark .tl.tp img{mix-blend-mode:normal}
+.tl.tb{font-weight:400;padding:7%;font-size:clamp(20px,2.4vw,34px);line-height:1.02;justify-content:flex-end;align-items:flex-start;text-align:left;color:#fff}
+.tl.tb span{display:block}
+@media (max-width:900px){
+  .tiles{gap:6px;background:none}
+  .tl.tw:not(.tp):not(.tx) b{font-size:22px}
+  .tl.tw:not(.tp):not(.tx) span{font-size:19px;line-height:1.05}
+  .tl.tx span{font-size:22px}
+  .tl.tp i{font-size:10px}
+  .tl.tb{font-size:22px;padding:12px}
+}
+.sec .tiles{background:transparent}
+
+/* белые плитки на белой странице не видны — даём светло-серую заливку (в референсе они белые на сером холсте Figma) */
+.tl.tw{background:#f2f2f2}
+@media (max-width:900px){.tl.tx{display:none}.tl.tp img{width:64%;height:64%}}
+
+@media (min-width:901px){.cs-friend .cc{flex:0 0 min(31%,440px)}.cs-friend .car-t{gap:12px;padding:0 max(24px,calc((100% - var(--max,1320px))/2))}}
