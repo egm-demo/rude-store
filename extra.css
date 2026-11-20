@@ -178,3 +178,18 @@
 @media (max-width:900px){.tl.tx{display:none}.tl.tp img{width:64%;height:64%}}
 
 @media (min-width:901px){.cs-friend .cc{flex:0 0 min(31%,440px)}.cs-friend .car-t{gap:12px;padding:0 max(24px,calc((100% - var(--max,1320px))/2))}}
+
+/* как в референсе: белые плитки на сером холсте, шрифт Jost (Futura-подобный), «−15%» мелко, «Доставка» крупно */
+.sec .tiles{background:#efefef;padding:8px;gap:8px}
+.tl.tw{background:#fff}
+.tiles .tl,.tiles .tl *{font-family:'Jost',sans-serif!important}
+.tl.tw:not(.tp):not(.tx) b{font-size:clamp(14px,1.3vw,20px)!important;font-weight:500}
+.tl.tw:not(.tp):not(.tx) span{font-size:clamp(20px,2.3vw,34px)!important;line-height:1.02;font-weight:500}
+.tl.tx span{font-weight:500}
+.tl.tb span{font-weight:400}
+@media (max-width:900px){.sec .tiles{padding:6px;gap:6px;margin:0 -16px}.tl.tw:not(.tp):not(.tx) b{font-size:14px!important}.tl.tw:not(.tp):not(.tx) span{font-size:21px!important}.tl.tp img{width:70%;height:66%}}
+
+.tl.tw:not(.tp):not(.tx) span,.tl.tx span,.tl.tp i{font-weight:400!important}
+.tl.tp i{letter-spacing:.02em}
+.tl.tp img{width:68%;height:64%}
+@media (min-width:901px){.sec .tiles{background:#f4f4f4;padding:20px;gap:20px}}
