@@ -193,3 +193,5 @@
 .tl.tp i{letter-spacing:.02em}
 .tl.tp img{width:68%;height:64%}
 @media (min-width:901px){.sec .tiles{background:#f4f4f4;padding:20px;gap:20px}}
+.tl.tw:not(.tp):not(.tx) b{font-size:clamp(17px,1.7vw,26px)!important}
+@media (max-width:900px){.tl.tw:not(.tp):not(.tx) b{font-size:17px!important}}
