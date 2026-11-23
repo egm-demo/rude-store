@@ -287,4 +287,6 @@
 .b1,.b4{background:var(--tile);color:#111}
 .dark .bt img{mix-blend-mode:multiply}
 .b2 .lg{font-size:46px}
-@media (max-width:900px){.bento{grid-template-columns:1fr 1fr;grid-template-areas:"a a" "b b" "c d" "e f"}.b1{grid-column:auto}}
+@media (max-width:900px){.bento{grid-template-columns:1fr 1fr;grid-template-areas:"a a" "b b" "c d" "e f"}.b1{grid-column:1 / -1}}
+.bt .eyebrow{white-space:nowrap;font-size:11px}
+@media (max-width:900px){.b1 img{inset:4% 8% 34%;height:62%}.b1 b{font-size:24px}}
