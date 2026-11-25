@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Каталог — The Rude Store</title>
+<meta name="description" content="Оригинальные кроссовки, куртки и одежда. Фильтры по категории, бренду и скидкам.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Rude Store">
+<meta property="og:title" content="Каталог — The Rude Store"><meta property="og:description" content="Оригинальные кроссовки, куртки и одежда. Фильтры по категории, бренду и скидкам.">
+<meta property="og:image" content="https://egm-demo.github.io/rude-store/shop/img/p04.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="shop.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="catalog">
+<div id="top"></div>
+<main id="main">
+
+<div class="ph"><div class="crumbs"><a href="index.html">Главная</a> / Каталог</div><h1 class="h1" id="ct">Каталог</h1></div>
+<div class="cat">
+<div class="bar"><span class="cnt" id="cc" aria-live="polite"></span>
+<button class="fbtn" type="button" id="fbtn">Фильтры <span class="n" id="fn"></span></button>
+<label class="sr" for="sort">Сортировка</label>
+<select class="sel" id="sort"><option value="new">Новые</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option><option value="disc">По скидке</option></select></div>
+<aside class="side"><div class="flt" id="flt" role="dialog" aria-label="Фильтры"><div class="fh"><h2>Фильтры</h2><button class="ib" type="button" aria-label="Закрыть фильтры" data-close>
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+<div class="fb"></div><div class="ff"><button class="btn ghost" type="button" data-reset>Сбросить</button><button class="btn" type="button" data-close id="fshow">Показать</button></div></div></aside>
+<div class="main"><div class="act" id="act" hidden></div>
+<div class="grid c4" id="cg"></div>
+<div class="none" id="none" hidden><b>Ничего не нашли</b><p>Попробуйте убрать фильтры или пришлите ссылку на нужную пару — найдём под заказ.</p><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><button class="btn ghost" type="button" data-reset>Сбросить фильтры</button><a class="btn" href="index.html#order">Заказать по ссылке</a></div></div></div>
+</div>
+</main>
+<div id="bot"></div>
+<script src="config.js"></script><script src="products.js"></script><script src="shop.js"></script>
+</body></html>

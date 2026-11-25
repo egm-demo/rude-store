@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Rude Store — оригиналы из‑за рубежа</title>
+<meta name="description" content="Оригинальные кроссовки, куртки и одежда из‑за рубежа. Цена под ключ, легит‑чек, доставка по России.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Rude Store">
+<meta property="og:title" content="The Rude Store — оригиналы из‑за рубежа"><meta property="og:description" content="Оригинальные кроссовки, куртки и одежда из‑за рубежа. Цена под ключ, легит‑чек, доставка по России.">
+<meta property="og:image" content="https://egm-demo.github.io/rude-store/shop/img/p04.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="shop.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home">
+<div id="top"></div>
+<main id="main">
+
+<section class="hero"><div class="in">
+<div><div class="eyebrow">Магазин оригиналов</div>
+<h1>Оригиналы из&#8209;за рубежа. <span class="nb">Без переплат.</span></h1>
+<p>Цена под ключ: с доставкой и таможней. К каждой паре — чек и легит‑чек.</p>
+<div class="cta"><a class="btn" href="catalog.html?sort=new">Смотреть каталог</a><a class="btn ghost" href="#order">Заказать по ссылке</a></div></div>
+<div class="art" id="heroArt">
+<a href="product.html?id=4"><img src="img/p04.jpg" alt="" width="400" height="400"><span>Air Jordan 1 Mid</span></a>
+<a href="product.html?id=1"><img src="img/p01.jpg" alt="" width="400" height="400"><span>Air Jordan 11 CMFT Low</span></a>
+<a href="product.html?id=7"><img src="img/p07.jpg" alt="" width="400" height="400"><span>Nike Air Ghost Racer</span></a>
+</div></div></section>
+
+<div class="mq" aria-label="Только оригинал. Не вежливо. Доставка по России. Под заказ 12–18 дней. Rude Club до 7%. Легит-чек."><div class="mq-t">
+<div class="mq-g" aria-hidden="true"><span>Только оригинал</span><span>Не вежливо</span><span>Доставка по России</span><span>Под заказ 12–18 дней</span><span>Rude Club до 7%</span><span>Легит‑чек</span></div>
+<div class="mq-g" aria-hidden="true"><span>Только оригинал</span><span>Не вежливо</span><span>Доставка по России</span><span>Под заказ 12–18 дней</span><span>Rude Club до 7%</span><span>Легит‑чек</span></div>
+</div></div>
+
+<section class="sec wrap" id="new">
+<div class="sechead"><div><div class="eyebrow">Каталог</div><h2 class="h2">Новое в магазине</h2></div><a class="lnk" id="newAll" href="catalog.html">Смотреть все</a></div>
+<div class="chips" id="newChips"></div>
+<div class="grid c4" id="newGrid"></div>
+</section>
+
+<section class="sec wrap" id="brands" style="padding-top:0"><div class="eyebrow" style="margin-bottom:20px" id="brandsH">Бренды</div><div class="brands" id="brandsList"></div></section>
+
+<section class="sec wrap" id="legit"><div class="legit">
+<div><div class="eyebrow">Проверка</div><h2 class="h2" style="margin-top:12px">Подделку не продаём</h2><p class="lead">Если вы сомневаетесь — проверьте сами. Все документы покажем до оплаты.</p><p style="margin-top:24px"><a class="lnk" href="info.html#original">Как мы проверяем</a></p></div>
+<ol class="rv">
+<li><b>Чек и бирки</b><span>Фото чека из магазина‑донора и бирок до отправки.</span></li>
+<li><b>Легит‑чек</b><span>Независимая проверка пары экспертом по фото.</span></li>
+<li><b>Честный знак</b><span>Код маркировки на обуви — проверяется в приложении.</span></li>
+<li><b>Гарантия</b><span>Не оригинал — вернём деньги полностью.</span></li>
+</ol></div></section>
+
+<section class="ord sec" id="order"><div class="in wrap">
+<div><div class="eyebrow">Под заказ</div><h2 class="h2" style="margin-top:12px">Нашли пару в другом магазине?</h2><p class="lead">Пришлите ссылку — посчитаем цену под ключ за 15 минут.</p></div>
+<form class="of" id="ofForm" novalidate>
+<div class="r2"><div><label class="sr" for="ofl">Ссылка на товар</label><input class="fi" id="ofl" name="link" type="url" inputmode="url" placeholder="Ссылка на товар" required autocomplete="off"></div>
+<div><label class="sr" for="ofs">Размер</label><select class="sel" id="ofs" name="size" aria-label="Размер"><option value="">Размер</option>
+<option>EU 39</option><option>EU 40</option><option>EU 41</option><option>EU 42</option><option>EU 43</option><option>EU 44</option><option>EU 45</option><option>EU 46</option><option>S</option><option>M</option><option>L</option><option>XL</option></select></div></div>
+<button class="btn inv block" type="submit">Узнать цену</button>
+<p class="st" id="ofSt" role="status"></p>
+<div class="ofn"><div><b>15 минут</b>на расчёт</div><div><b>12–18 дней</b>доставка</div><div><b>30%</b>предоплата</div></div>
+</form></div></section>
+
+<section class="sec wrap" id="raffle"><div class="sechead"><div><div class="eyebrow">Розыгрыш</div><h2 class="h2">Разыгрываем пару</h2></div></div>
+<div class="raf"><div class="im"><img id="rafImg" src="img/p04.jpg" alt=""></div>
+<div class="tx"><h3 class="h2" id="rafTitle"></h3><p>Выберите размер и подайте заявку. Победителя выберем случайно, итоги публикуем в сообществе.</p>
+<div class="cd" id="cd" role="timer" aria-label="До конца розыгрыша"></div>
+<div><div class="eyebrow" style="margin-bottom:10px">Размер EU</div><div class="szs" id="rafSizes" role="group" aria-label="Размер"></div></div>
+<button class="btn" type="button" id="rafBtn">Участвовать</button><p class="st" id="rafSt" role="status"></p></div></div></section>
+
+<section class="sec wrap" id="club"><div class="sechead"><div><div class="eyebrow">Rude Club</div><h2 class="h2">Чем больше берёте — тем дешевле</h2></div><a class="lnk" href="club.html">Подробнее</a></div>
+<div class="lvl rv">
+<div><i>01</i><b>Rude</b><div class="pc">3%</div><div class="cond">с первого заказа</div><ul><li>Бонусы 3% с каждого заказа</li><li>−500 ₽ в день рождения</li><li>Участие в розыгрышах</li></ul></div>
+<div><i>02</i><b>Ruder</b><div class="pc">5%</div><div class="cond">от 30 000 ₽ за год</div><ul><li>Бонусы 5%</li><li>Ранний доступ к дропам на 24 часа</li><li>Бесплатный СДЭК</li></ul></div>
+<div><i>03</i><b>Rudest</b><div class="pc">7%</div><div class="cond">от 80 000 ₽ за год</div><ul><li>Бонусы 7%</li><li>Личный байер</li><li>×2 шанс в розыгрышах</li></ul></div>
+</div><p class="lvln">1 бонус = 1 ₽, бонусами оплачивается до 20% заказа, сгорают через 6 месяцев.</p></section>
+
+<section class="wrap" style="padding-bottom:56px"><div class="tgb"><div><b>Новинки и розыгрыши — первыми в <span data-ch-name>ВКонтакте</span></b><span>Дропы, цены и итоги розыгрышей. Без спама.</span></div><a class="btn" data-ch-url href="#">Подписаться</a></div></section>
+
+<div class="bigw" aria-hidden="true"><span class="lg">The Rude Store</span></div>
+</main>
+<div id="bot"></div>
+<script src="config.js"></script><script src="products.js"></script><script src="shop.js"></script>
+</body></html>

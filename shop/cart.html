@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Корзина и заявка — The Rude Store</title>
+<meta name="description" content="Оформите заявку на заказ — подтвердим размер и срок за 15 минут.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Rude Store">
+<meta property="og:title" content="Корзина и заявка — The Rude Store"><meta property="og:description" content="Оформите заявку на заказ — подтвердим размер и срок за 15 минут.">
+<meta property="og:image" content="https://egm-demo.github.io/rude-store/shop/img/p04.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inter-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css"><link rel="stylesheet" href="shop.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="cart">
+<div id="top"></div>
+<main id="main">
+
+<div class="ph"><div class="crumbs"><a href="index.html">Главная</a> / Корзина</div><h1 class="h1">Корзина</h1></div>
+<div id="cartEmpty" class="wrap" hidden><div class="empty" style="padding:72px 0"><b>Корзина пуста</b><span>Выберите пару в каталоге.</span><a class="btn" href="catalog.html">В каталог</a></div></div>
+<div class="cartp" id="cartFull" hidden>
+<div><div id="lines"></div></div>
+<div class="side"><div class="sum"><div class="tot big"><span>Итого</span><span id="sum"></span></span></div><p class="note">Предоплата 30% для заказа: <b id="pre"></b>. Цена окончательная, с доставкой и таможней.</p></div>
+<div class="hon" style="margin:16px 0">Сайт не принимает оплату. Вы оставляете заявку — менеджер подтверждает наличие размера, срок и реквизиты в чате.</div>
+<form class="form" id="orderForm" novalidate>
+<div class="fld"><label for="fn1">Имя</label><input class="fi" id="fn1" name="name" required autocomplete="name"></div>
+<div class="fld"><label for="fp">Телефон</label><input class="fi" id="fp" name="phone" type="tel" inputmode="tel" required autocomplete="tel" placeholder="+7"></div>
+<div class="fld"><label for="fc">Город доставки</label><input class="fi" id="fc" name="city" required autocomplete="address-level2"></div>
+<div class="fld"><span class="lb">Как связаться</span><div class="seg" role="radiogroup" aria-label="Способ связи">
+<label><input type="radio" name="via" value="ВКонтакте" checked><span>ВКонтакте</span></label><label><input type="radio" name="via" value="Telegram"><span>Telegram</span></label><label><input type="radio" name="via" value="WhatsApp"><span>WhatsApp</span></label><label><input type="radio" name="via" value="Звонок"><span>Звонок</span></label></div></div>
+<div class="fld"><label for="fm">Комментарий</label><input class="fi" id="fm" name="comment" placeholder="Необязательно"></div>
+<label class="cons"><input type="checkbox" name="consent" required><span class="bx"></span><span>Согласен на обработку персональных данных по <a href="privacy.html" target="_blank">политике</a></span></label>
+<button class="btn block" type="submit">Сформировать заявку</button></form>
+<div class="res" id="result" hidden><div><div class="eyebrow">Заявка готова</div><h2 class="h2" style="margin-top:10px">Осталось отправить</h2></div>
+<div class="steps"><p>1. Нажмите кнопку — текст скопируется, откроется чат.</p><p>2. Вставьте текст и отправьте. Ответим за 15 минут.</p></div>
+<textarea id="orderText" readonly aria-label="Текст заявки"></textarea>
+<div class="btns"><button class="btn block" type="button" id="sendVk">Отправить во ВКонтакте</button>
+<button class="btn block" type="button" id="sendTg" hidden>Отправить в Telegram</button><button class="btn block" type="button" id="sendWa" hidden>Отправить в WhatsApp</button>
+<button class="btn ghost block" type="button" id="copyOnly">Скопировать текст</button><button class="btn ghost block" type="button" id="editOrder">Изменить данные</button>
+<button class="rm lnk" type="button" id="clearCart" style="justify-self:center;min-height:44px">Очистить корзину</button></div></div>
+</div></div>
+</main>
+<div id="bot"></div>
+<script src="config.js"></script><script src="products.js"></script><script src="shop.js"></script>
+</body></html>
