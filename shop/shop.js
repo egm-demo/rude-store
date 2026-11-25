@@ -218,7 +218,8 @@ function initSearch() {
 /* ---------- главная ---------- */
 function initHome() {
   const g = $('#newGrid'), ch = $('#newChips');
-  const draw = cat => { const l = P.filter(p => !cat || p.cat === cat).slice(0, 8); g.innerHTML = l.map(card).join(''); $('#newAll').href = 'catalog.html' + (cat ? '?cat=' + encodeURIComponent(cat) : '?sort=new'); };
+  const skip = cat => cat ? [] : [1, 2, 6, 11, 18];
+  const draw = cat => { const l = P.filter(p => (!cat || p.cat === cat) && !skip(cat).includes(p.id)).slice(0, 8); g.innerHTML = l.map(card).join(''); $('#newAll').href = 'catalog.html' + (cat ? '?cat=' + encodeURIComponent(cat) : '?sort=new'); };
   draw('');
   ch.innerHTML = ['', 'Обувь', 'Одежда', 'Куртки'].map((c, i) => `<button class="chip${i ? '' : ' on'}" type="button" data-c="${c}" aria-pressed="${!i}">${c || 'Все'}</button>`).join('');
   ch.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; $$('.chip', ch).forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', x === b); }); draw(b.dataset.c); });
@@ -343,6 +344,7 @@ function initProduct() {
   document.body.classList.add('has-bar');
   const bar = document.createElement('div'); bar.className = 'bar-m';
   bar.innerHTML = `${priceHtml(p)}<button class="btn" type="button" id="add2">В корзину</button>`; document.body.appendChild(bar);
+  if ('IntersectionObserver' in window) { bar.classList.add('off'); new IntersectionObserver(es => es.forEach(e => bar.classList.toggle('off', e.isIntersecting || e.boundingClientRect.top > 0))).observe($('#add')); }
   const szg = $('#szg'), err = $('#szerr');
   szg.addEventListener('click', e => { const b = e.target.closest('.sz'); if (!b) return; pick = b.dataset.s; $$('.sz', szg).forEach(x => x.setAttribute('aria-pressed', x === b)); err.textContent = ''; });
   const need = () => { if (pick) return true; err.textContent = shoe ? 'Выберите размер EU' : 'Выберите размер'; szg.classList.remove('err'); void szg.offsetWidth; szg.classList.add('err'); $('#szw').scrollIntoView({ behavior: 'smooth', block: 'center' }); return false; };

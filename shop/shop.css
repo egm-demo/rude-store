@@ -473,3 +473,23 @@ html{scroll-behavior:auto}
 .pdp .gal .hintz{color:#55555b}
 .cond,.lvl i{color:#5f5f66}
 .sechead .lnk{display:inline-flex;align-items:center;min-height:44px}
+
+/* ---------- полировка v2 ---------- */
+.hero .art{align-items:end}
+.hero .art a:nth-child(2){margin-top:0}
+@media(min-width:900px){.hero .art a:nth-child(2){margin-top:0;transform:translateY(-40px)}.hero .art a:nth-child(2):hover{transform:translateY(-46px)}}
+.hero .art img{object-fit:contain;transform:scale(1.08)}
+.hero .art span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#55555b;margin-top:8px}
+.mq-g span{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;padding:18px 0}
+.mq-g span::after{width:4px;height:4px;margin:0 28px;top:-1px}
+.c-n{min-height:2.6em}
+.bar-m{transition:transform .35s var(--ease)}
+.bar-m.off{transform:translateY(110%)}
+/* hero: одинаковые белые плитки (transform ломал multiply) */
+.hero .art{align-items:start;gap:clamp(8px,1.2vw,16px)}
+.hero .art a,.hero .art a:nth-child(2){transform:none;margin-top:0}
+.hero .art a:hover,.hero .art a:nth-child(2):hover{transform:translateY(-6px)}
+.hero .art img{mix-blend-mode:normal;background:#fff;transform:none;padding:6%;box-sizing:border-box}
+.hero .art span{min-height:0;letter-spacing:.1em}
+@media(max-width:560px){.hero .art span{font-size:9.5px;letter-spacing:.06em}}
+.c-p{flex-wrap:wrap;row-gap:2px}
