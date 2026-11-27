@@ -51,7 +51,7 @@ function layout(ids) {
 
 function paint(el, ids, opts = {}) {
   const L = layout(ids);
-  const keep = new Map([...el.querySelectorAll('.L')].map(n => [n.dataset.k, n]));
+  const keep = new Map([...el.querySelectorAll('.L:not(.out)')].map(n => [n.dataset.k, n]));
   const used = new Set();
   L.forEach((o, n) => {
     const k = o.it.id + (o.flip ? 'f' : '') ;
